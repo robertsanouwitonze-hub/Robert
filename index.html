@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050a12">
+  <meta name="description" content="Robert's portfolio — student, developer, innovator and designer.">
+  <title>Robert | Portfolio</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- INTRO SEQUENCE: simulated visual effect only; no real hacking takes place. -->
+  <div class="intro" id="intro" aria-label="Portfolio startup animation">
+    <canvas id="matrixCanvas" aria-hidden="true"></canvas>
+    <div class="scanlines" aria-hidden="true"></div>
+    <div class="intro-top"><span><i></i> ROBERT.OS</span><span id="buildVersion">BOOT SEQUENCE / 01</span></div>
+
+    <section class="boot-screen intro-stage active" id="stageBoot">
+      <div class="corner corner-tl"></div><div class="corner corner-tr"></div>
+      <div class="corner corner-bl"></div><div class="corner corner-br"></div>
+      <div class="boot-core">
+        <div class="boot-symbol"><span></span><span></span><span></span><span></span></div>
+        <p class="micro-label">PERSONAL SYSTEM INITIALIZATION</p>
+        <h1 class="boot-name" data-text="ROBERT">ROBERT</h1>
+        <p class="boot-status" id="bootStatus">INITIALIZING PORTFOLIO...</p>
+        <div class="progress-row"><div class="progress-track"><div id="progressFill"></div></div><span id="progressNumber">00%</span></div>
+        <div class="boot-log" id="bootLog">
+          <p>&gt; Loading interface modules...</p>
+          <p>&gt; Preparing user environment...</p>
+          <p>&gt; Connecting creative systems...</p>
+        </div>
+      </div>
+      <div class="boot-side-note">LOCAL SESSION // SECURE VISUAL MODE</div>
+    </section>
+
+    <section class="glitch-screen intro-stage" id="stageGlitch">
+      <div class="glitch-grid" aria-hidden="true"></div>
+      <div class="glitch-center">
+        <p class="micro-label">UNEXPECTED SIGNAL DETECTED</p>
+        <h2 class="glitch-word" data-text="ROBERT">ROBERT</h2>
+        <div class="error-lines">
+          <p>&gt; Warning: unknown process detected.</p>
+          <p>&gt; Interface signal interrupted.</p>
+          <p>&gt; Rebuilding visual environment...</p>
+          <p class="warning-line">&gt; SYSTEM OVERRIDE // SIMULATION ONLY</p>
+        </div>
+      </div>
+      <div class="glitch-bar"></div><div class="glitch-bar glitch-bar-two"></div>
+    </section>
+
+    <section class="access-screen intro-stage" id="stageAccess">
+      <div class="access-circuit" aria-hidden="true"></div>
+      <div class="radar-ring ring-one"></div><div class="radar-ring ring-two"></div><div class="radar-ring ring-three"></div>
+      <div class="lock-wrap">
+        <svg class="lock-svg" viewBox="0 0 120 140" role="img" aria-label="Unlocked padlock">
+          <path class="lock-shackle" d="M35 57V38C35 18 48 8 63 8S91 19 91 38V48" />
+          <rect class="lock-body" x="19" y="52" width="82" height="76" rx="2"/>
+          <circle class="lock-keyhole" cx="60" cy="82" r="8"/>
+          <path class="keyhole-stem" d="M60 88V103"/>
+        </svg>
+      </div>
+      <p class="access-small">IDENTITY VERIFIED</p>
+      <h2 class="access-title">ACCESS GRANTED</h2>
+      <p class="access-subtitle">WELCOME TO ROBERT'S PORTFOLIO</p>
+      <div class="access-log"><span>&gt; Identity confirmed</span><span>&gt; Access level: full</span><span>&gt; Loading home interface...</span></div>
+    </section>
+    <button class="skip-intro" id="skipIntro" type="button">SKIP INTRO ↗</button>
+  </div>
+
+  <main class="site" id="site" aria-hidden="true">
+    <div class="ambient-lines" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Robert home">Robert<span>.</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav" id="mainNav" aria-label="Main navigation">
+        <a class="nav-link active" href="#home">Home</a>
+        <a class="nav-link" href="about.html" data-coming-soon="About">About</a>
+        <a class="nav-link" href="project.html" data-coming-soon="Project">Project</a>
+        <a class="nav-link" href="certificate.html" data-coming-soon="Certificate">Certificate</a>
+        <a class="nav-link nav-contact" href="contact.html" data-coming-soon="Contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> HELLO, WORLD <span class="wave">👋</span></p>
+        <h1>Hy, I'm Robert<span class="blue-dot">.</span></h1>
+        <div class="role-line"><span id="typedRole">I'm a Student</span><span class="typing-caret" aria-hidden="true"></span></div>
+        <p class="hero-description">I build useful projects, explore technology, and keep learning through code and creativity.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="project.html" data-coming-soon="Project">View Projects <span>↗</span></a>
+          <a class="button button-outline" href="about.html" data-coming-soon="About">About Me</a>
+        </div>
+        <p class="availability"><span class="status-dot"></span> Learning, building, and improving every day</p>
+      </div>
+
+      <div class="hero-visual">
+        <div class="network network-one"></div><div class="network network-two"></div>
+        <span class="hex hex-a"></span><span class="hex hex-b"></span><span class="hex hex-c"></span>
+        <div class="portrait-frame">
+          <img src="profile.png" alt="Robert's profile portrait" onerror="this.style.display='none';document.getElementById('profileFallback').style.display='flex';">
+          <div class="profile-fallback" id="profileFallback"><div class="fallback-avatar"><span></span><i></i></div><strong>profile.png</strong><small>Add your photo here</small></div>
+        </div>
+        <span class="orbit-point point-a"></span><span class="orbit-point point-b"></span><span class="orbit-point point-c"></span>
+        <div class="visual-label"><span>FIG. 01</span><span>ROBERT / DIGITAL PROFILE</span></div>
+      </div>
+    </section>
+
+    <section class="principles" aria-label="What I do">
+      <article class="principle">
+        <div class="principle-icon">&lt;/&gt;</div>
+        <div><h2>Build</h2><p>Practical projects</p></div>
+      </article>
+      <article class="principle">
+        <div class="principle-icon"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M3 14 20 5l17 9-17 9L3 14Z"/><path d="M10 19v9c6 5 14 5 20 0v-9M36 15v12"/></svg></div>
+        <div><h2>Learn</h2><p>Every day</p></div>
+      </article>
+      <article class="principle">
+        <div class="principle-icon"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M12 25c-2-2-4-5-4-9a12 12 0 1 1 24 0c0 4-2 7-4 9l-2 3H14l-2-3Z"/><path d="M15 33h10M17 37h6"/></svg></div>
+        <div><h2>Create</h2><p>Ideas into solutions</p></div>
+      </article>
+    </section>
+    <footer class="site-footer"><span>© <span id="year"></span> Robert</span><span>Made with curiosity <b>•</b> Rwanda</span></footer>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
