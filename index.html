@@ -1,147 +1,251 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#050a12">
-  <meta name="description" content="Robert's portfolio — student, developer, innovator and designer.">
-  <title>Robert | Portfolio</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
-<link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#f8f5ed">
+  <meta name="description" content="Robert's personal portfolio — student, developer and innovator from Rwanda.">
+  <title>Robert | Student, Developer & Innovator</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- INTRO SEQUENCE: simulated visual effect only; no real hacking takes place. -->
-  <div class="intro" id="intro" aria-label="Portfolio startup animation">
-    <canvas id="matrixCanvas" aria-hidden="true"></canvas>
-    <div class="scanlines" aria-hidden="true"></div>
-    <div class="intro-top"><span><i></i> ROBERT.OS</span><span id="buildVersion">BOOT SEQUENCE / 01</span></div>
+  <header class="navbar">
+    <a class="logo" href="#home">ROBERT<span>.</span></a>
 
-    <section class="boot-screen intro-stage active" id="stageBoot">
-      <div class="corner corner-tl"></div><div class="corner corner-tr"></div>
-      <div class="corner corner-bl"></div><div class="corner corner-br"></div>
-      <div class="boot-core">
-        <div class="boot-symbol"><span></span><span></span><span></span><span></span></div>
-        <p class="micro-label">PERSONAL SYSTEM INITIALIZATION</p>
-        <h1 class="boot-name" data-text="ROBERT">ROBERT</h1>
-        <p class="boot-status" id="bootStatus">INITIALIZING PORTFOLIO...</p>
-        <div class="progress-row"><div class="progress-track"><div id="progressFill"></div></div><span id="progressNumber">00%</span></div>
-        <div class="boot-log" id="bootLog">
-          <p>&gt; Loading interface modules...</p>
-          <p>&gt; Preparing user environment...</p>
-          <p>&gt; Connecting creative systems...</p>
-        </div>
-      </div>
-      <div class="boot-side-note">LOCAL SESSION // SECURE VISUAL MODE</div>
-    </section>
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
 
-    <section class="glitch-screen intro-stage" id="stageGlitch">
-      <div class="glitch-grid" aria-hidden="true"></div>
-      <div class="glitch-center">
-        <p class="micro-label">UNEXPECTED SIGNAL DETECTED</p>
-        <h2 class="glitch-word" data-text="ROBERT">ROBERT</h2>
-        <div class="error-lines">
-          <p>&gt; Warning: unknown process detected.</p>
-          <p>&gt; Interface signal interrupted.</p>
-          <p>&gt; Rebuilding visual environment...</p>
-          <p class="warning-line">&gt; SYSTEM OVERRIDE // SIMULATION ONLY</p>
-        </div>
-      </div>
-      <div class="glitch-bar"></div><div class="glitch-bar glitch-bar-two"></div>
-    </section>
+    <nav class="nav-links" id="navLinks">
+      <a class="active" href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-    <section class="access-screen intro-stage" id="stageAccess">
-      <div class="access-circuit" aria-hidden="true"></div>
-      <div class="radar-ring ring-one"></div><div class="radar-ring ring-two"></div><div class="radar-ring ring-three"></div>
-      <div class="lock-wrap">
-        <svg class="lock-svg" viewBox="0 0 120 140" role="img" aria-label="Unlocked padlock">
-          <path class="lock-shackle" d="M35 57V38C35 18 48 8 63 8S91 19 91 38V48" />
-          <rect class="lock-body" x="19" y="52" width="82" height="76" rx="2"/>
-          <circle class="lock-keyhole" cx="60" cy="82" r="8"/>
-          <path class="keyhole-stem" d="M60 88V103"/>
-        </svg>
-      </div>
-      <p class="access-small">IDENTITY VERIFIED</p>
-      <h2 class="access-title">ACCESS GRANTED</h2>
-      <p class="access-subtitle">WELCOME TO ROBERT'S PORTFOLIO</p>
-      <div class="access-log"><span>&gt; Identity confirmed</span><span>&gt; Access level: full</span><span>&gt; Loading home interface...</span></div>
-    </section>
-    <button class="skip-intro" id="skipIntro" type="button">SKIP INTRO ↗</button>
-  </div>
+    <button class="theme-toggle" id="themeToggle"
+      aria-label="Switch color theme">☼</button>
+  </header>
 
-  <main class="site" id="site" aria-hidden="true">
-    <div class="ambient-lines" aria-hidden="true"></div>
-    <header class="site-header">
-      <a class="brand" href="#home" aria-label="Robert home">Robert<span>.</span></a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
-      <nav class="nav" id="mainNav" aria-label="Main navigation">
-        <a class="nav-link active" href="#home">Home</a>
-        <a class="nav-link" href="about.html" ">About</a>    
-        <a class="nav-link" href="project.html" >Project</a>
-        <a class="nav-link" href="certificate.html">Certificate</a>
-        <a class="nav-link nav-contact" href="contact.html">Contact</a>
-      </nav>
-    </header>
-
-    <section class="hero" id="home">
+  <main>
+    <section class="hero section-wrap" id="home">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="eyebrow-line"></span> HELLO, WORLD <span class="wave">👋</span></p>
-        <h1>Hy, I'm Robert<span class="blue-dot">.</span></h1>
-        <div class="role-line"><span id="typedRole">I'm a Student</span><span class="typing-caret" aria-hidden="true"></span></div>
-        <p class="hero-description">I build useful projects, explore technology, and keep learning through code and creativity.</p>
+        <span class="eyebrow"><span class="status-dot"></span> Hello, world.</span>
+
+        <h1>I'm <span>Robert.</span></h1>
+
+        <div class="roles" aria-label="Student, Full Stack Developer, Innovator">
+          <span>Student</span>
+          <i></i>
+          <span id="typedRole">Full Stack Developer</span>
+          <i></i>
+          <span>Innovator</span>
+        </div>
+
+        <p class="hero-description">
+          I'm a Rwandan student passionate about technology, problem-solving
+          and building solutions that make a real impact. I turn ideas into
+          projects and constantly strive to learn, grow and create a better future.
+        </p>
+
         <div class="hero-actions">
-          <a class="button button-primary" href="project.html" data-coming-soon="Project">View Projects <span>↗</span></a>
-          <a class="button button-outline" href="about.html" data-coming-soon="About">About Me</a>
+          <a class="button button-primary" href="#projects">
+            View My Projects <span aria-hidden="true">→</span>
+          </a>
+          <a class="button button-outline" href="#contact">
+            <span aria-hidden="true">✉</span> Contact Me
+          </a>
         </div>
-        <p class="availability"><span class="status-dot"></span> Learning, building, and improving every day</p>
+
+        <div class="location-note">
+          <span>⌖</span> Rwanda <span class="note-divider">/</span>
+          <span>⌑</span> Grade 10 → 11
+        </div>
       </div>
 
-      <div class="hero-visual">
-        <div class="network network-one"></div><div class="network network-two"></div>
-        <span class="hex hex-a"></span><span class="hex hex-b"></span><span class="hex hex-c"></span>
+      <div class="portrait-area">
+        <div class="portrait-backdrop"></div>
+        <svg class="portrait-lines" viewBox="0 0 600 500" fill="none"
+          aria-hidden="true">
+          <path d="M20 370 C80 350 85 290 150 300 S240 400 350 340 S430 180 500 210 S555 245 600 170"/>
+          <path d="M0 395 C70 375 100 315 155 325 S250 425 365 360 S445 205 505 230 S560 265 600 195"/>
+          <path d="M90 65 H160 L185 90 V120 L215 150"/>
+          <path d="M5 260 H65 L95 230 H145"/>
+          <path d="M220 20 C360 0 370 100 460 115 S550 80 600 40"/>
+          <path d="M225 32 C355 12 380 115 460 130 S555 95 600 55"/>
+          <circle cx="90" cy="65" r="3"/>
+          <circle cx="5" cy="260" r="3"/>
+          <circle cx="145" cy="230" r="3"/>
+        </svg>
+
         <div class="portrait-frame">
-          <img src="profile.png" alt="Robert's profile portrait" onerror="this.style.display='none';document.getElementById('profileFallback').style.display='flex';">
-          <div class="profile-fallback" id="profileFallback"><div class="fallback-avatar"><span></span><i></i></div><strong>profile.png</strong><small>Add your photo here</small></div>
+          <img src="profile.png" alt="Portrait of Robert"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+          <div class="photo-fallback">R<span>.</span></div>
         </div>
-        <span class="orbit-point point-a"></span><span class="orbit-point point-b"></span><span class="orbit-point point-c"></span>
-        <div class="visual-label"><span>FIG. 01</span><span>ROBERT / DIGITAL PROFILE</span></div>
+
+        <div class="handwritten">Build<br>Learn<br>Innovate <span>↙</span></div>
+        <div class="code-symbol" aria-hidden="true">&lt;/&gt;</div>
+      </div>
+
+      <div class="scroll-hint"><span>SCROLL</span><i></i></div>
+    </section>
+
+    <section class="pillars section-wrap" aria-label="My values">
+      <article class="pillar">
+        <div class="pillar-icon">&lt;/&gt;</div>
+        <div><h3>Build</h3><p>Turning ideas into<br>real projects.</p></div>
+      </article>
+      <article class="pillar">
+        <div class="pillar-icon">♧</div>
+        <div><h3>Learn</h3><p>Exploring new technologies<br>and improving every day.</p></div>
+      </article>
+      <article class="pillar">
+        <div class="pillar-icon">♧</div>
+        <div><h3>Innovate</h3><p>Creating solutions for<br>a better tomorrow.</p></div>
+      </article>
+    </section>
+
+    <section class="about section-wrap" id="about">
+      <div class="about-copy">
+        <span class="section-label">ABOUT ME</span>
+        <h2>More Than Just<br>a <span>Student</span></h2>
+        <p>
+          I'm Robert, a student from Rwanda with a passion for physics,
+          mathematics, chemistry and computer science. I'm focused on building
+          skills, creating meaningful projects and making a positive impact
+          in my community and beyond.
+        </p>
+        <div class="idea-note">Ideas <span>→</span> Code <span>→</span> Impact</div>
+      </div>
+
+      <div class="profile-facts">
+        <div class="fact"><span class="fact-icon">♙</span><div><small>Name</small><p>SANO UWITONZE Robert</p></div></div>
+        <div class="fact"><span class="fact-icon">⌖</span><div><small>Location</small><p>Rwanda</p></div></div>
+        <div class="fact"><span class="fact-icon">⌂</span><div><small>School</small><p>College Saint Andre</p></div></div>
+        <div class="fact"><span class="fact-icon">⌑</span><div><small>Current Grade</small><p>Grade 10 (S4)</p></div></div>
+        <div class="fact"><span class="fact-icon">♡</span><div><small>Interests</small><p>Physics, Math, Chemistry,<br>Biology, Computer Science, AI</p></div></div>
+      </div>
+
+      <blockquote class="quote-card">
+        <span class="quote-mark">“</span>
+        <p>Technology is not just about machines, it's about people, ideas and the future.</p>
+        <cite>— Robert</cite>
+      </blockquote>
+    </section>
+
+    <section class="journey-section" id="journey">
+      <div class="journey section-wrap">
+        <div class="journey-copy">
+          <span class="section-label">MY JOURNEY</span>
+          <h2>From Curiosity<br>to <span>Purpose</span></h2>
+          <p>
+            It all started with a simple curiosity — how things work.
+            That curiosity grew into a passion for technology, leading me
+            to explore coding, build projects and join opportunities that
+            help me grow. Every step teaches me something new and brings
+            me closer to my goals.
+          </p>
+          <a class="button button-primary" href="#about">Learn More About Me <span>→</span></a>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <span class="timeline-icon">▣</span>
+            <div><small>2023</small><p>Started exploring computers and programming.</p></div>
+          </article>
+          <article class="timeline-item">
+            <span class="timeline-icon">⌘</span>
+            <div><small>2024</small><p>Built my first real project, Electro-Lass.</p></div>
+          </article>
+          <article class="timeline-item">
+            <span class="timeline-icon">♧</span>
+            <div><small>2025</small><p>Became an ICSC Ambassador and joined global opportunities.</p></div>
+          </article>
+          <article class="timeline-item">
+            <span class="timeline-icon">⌑</span>
+            <div><small>2026+</small><p>Preparing for Grade 11 and aiming for fully funded study abroad.</p></div>
+          </article>
+        </div>
+
+        <div class="skills-card">
+          <span class="section-label">SKILLS &amp; TOOLS</span>
+          <div class="skills-grid">
+            <div class="skill"><div><span>Python</span></div><i><b style="--level:78%"></b></i></div>
+            <div class="skill"><div><span>Firebase</span></div><i><b style="--level:85%"></b></i></div>
+            <div class="skill"><div><span>HTML &amp; CSS</span></div><i><b style="--level:90%"></b></i></div>
+            <div class="skill"><div><span>Supabase</span></div><i><b style="--level:70%"></b></i></div>
+            <div class="skill"><div><span>JavaScript</span></div><i><b style="--level:65%"></b></i></div>
+            <div class="skill"><div><span>Git &amp; GitHub</span></div><i><b style="--level:72%"></b></i></div>
+            <div class="skill"><div><span>C++</span></div><i><b style="--level:50%"></b></i></div>
+            <div class="skill"><div><span>Linux</span></div><i><b style="--level:55%"></b></i></div>
+            <div class="skill"><div><span>SQL</span></div><i><b style="--level:52%"></b></i></div>
+            <div class="skill"><div><span>AI &amp; Machine Learning</span></div><i><b style="--level:45%"></b></i></div>
+          </div>
+          <p class="always-learning">∞ &nbsp; Always learning...</p>
+        </div>
       </div>
     </section>
 
-    <section class="principles" aria-label="What I do">
-      <article class="principle">
-        <div class="principle-icon">&lt;/&gt;</div>
-        <div><h2>Build</h2><p>Practical projects</p></div>
-      </article>
-      <article class="principle">
-        <div class="principle-icon"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M3 14 20 5l17 9-17 9L3 14Z"/><path d="M10 19v9c6 5 14 5 20 0v-9M36 15v12"/></svg></div>
-        <div><h2>Learn</h2><p>Every day</p></div>
-      </article>
-      <article class="principle">
-        <div class="principle-icon"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M12 25c-2-2-4-5-4-9a12 12 0 1 1 24 0c0 4-2 7-4 9l-2 3H14l-2-3Z"/><path d="M15 33h10M17 37h6"/></svg></div>
-        <div><h2>Create</h2><p>Ideas into solutions</p></div>
-      </article>
+    <section class="simple-section section-wrap" id="projects">
+      <span class="section-label">SELECTED WORK</span>
+      <h2>Ideas made <span>real.</span></h2>
+      <p class="section-intro">A few projects I'm building, improving and learning from.</p>
+      <div class="project-grid">
+        <article class="project-card">
+          <span class="project-number">01 / EDUCATION</span>
+          <h3>Electro-Lass</h3>
+          <p>A learning platform concept designed to make educational resources more accessible.</p>
+          <a href="https://electro-lass.vercel.app/" target="_blank" rel="noopener noreferrer">Explore project ↗</a>
+        </article>
+        <article class="project-card">
+          <span class="project-number">02 / PORTFOLIO</span>
+          <h3>My Digital Space</h3>
+          <p>A personal space to share my projects, learning journey and ideas.</p>
+          <a href="#home">Back to top ↑</a>
+        </article>
+        <article class="project-card">
+          <span class="project-number">03 / IN PROGRESS</span>
+          <h3>More to come</h3>
+          <p>I'm continuing to experiment, create and turn new ideas into useful tools.</p>
+          <a href="#contact">Let's connect ↗</a>
+        </article>
+      </div>
     </section>
-    <footer class="site-footer"><span>© <span id="year"></span> Robert</span>
-      
-<a href="https://github.com/robertsanouwitonze-hub"
-   target="_blank"
-   rel="noopener noreferrer"
-   class="github-icon"
-   aria-label="Visit my GitHub profile">
-  <i class="fa-brands fa-github"></i>
-</a>
 
-      <span>Made with curiosity <b>•</b> Rwanda</span></footer>
+    <section class="certificates section-wrap" id="certificates">
+      <span class="section-label">GROWTH &amp; RECOGNITION</span>
+      <h2>Learning beyond <span>the classroom.</span></h2>
+      <p>I'm building my experience through learning, leadership and technology opportunities.</p>
+      <div class="certificate-note">
+        <span class="certificate-icon">✳</span>
+        <div><h3>More achievements coming soon</h3><p>This section will showcase my verified certificates, awards and ambassador experiences.</p></div>
+      </div>
+    </section>
+
+    <section class="contact section-wrap" id="contact">
+      <span class="section-label">LET'S CONNECT</span>
+      <h2>Have an idea? <span>Let's talk.</span></h2>
+      <p>Interested in technology, collaboration or learning together? Reach out.</p>
+      <a class="button button-primary" href="mailto:robertsanouwitonze@gmail.com">Email Me <span>↗</span></a>
+    </section>
   </main>
 
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <footer class="footer">
+    <a class="logo" href="#home">ROBERT<span>.</span></a>
+    <p>Curious mind. Builder's spirit. Always learning.</p>
+    <a class="github-link" href="https://github.com/robertsanouwitonze-hub"
+      target="_blank" rel="noopener noreferrer" aria-label="Visit my GitHub">
+      GitHub ↗
+    </a>
+    <small>© <span id="year"></span> Robert. Made with curiosity in Rwanda.</small>
+  </footer>
 </body>
 </html>
