@@ -1,166 +1,76 @@
 
-// ===================================
-// PAGE LOADER
-// ===================================
-
-const pageLoader = document.getElementById("pageLoader");
+const loader = document.getElementById("loader");
 
 window.addEventListener("load", () => {
-  setTimeout(() => {
-    pageLoader.classList.add("hide");
-  }, 900);
+  setTimeout(() => loader?.classList.add("hidden"), 500);
 });
 
-
-// ===================================
-// MOBILE NAVIGATION
-// ===================================
-
 const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
+const navigation = document.getElementById("navigation");
 
-menuToggle.addEventListener("click", () => {
-  const isOpen = navLinks.classList.toggle("open");
-
+menuToggle?.addEventListener("click", () => {
+  const isOpen = navigation.classList.toggle("open");
   menuToggle.setAttribute("aria-expanded", String(isOpen));
 });
 
-navLinks.querySelectorAll("a").forEach(link => {
+navigation?.querySelectorAll("a").forEach(link => {
   link.addEventListener("click", () => {
-    navLinks.classList.remove("open");
-    menuToggle.setAttribute("aria-expanded", "false");
+    navigation.classList.remove("open");
+    menuToggle?.setAttribute("aria-expanded", "false");
   });
 });
 
-
-// ===================================
-// TYPEWRITER ANIMATION
-// ===================================
-
-const typedText = document.getElementById("typedText");
-
-const words = [
-  "Developer",
-  "Student",
-  "Innovator",
-  "Creative Thinker",
-  "Problem Solver"
-];
-
-let wordIndex = 0;
-let letterIndex = 0;
-let deleting = false;
+// Animated role text
+const typedRole = document.getElementById("typedRole");
+const roles = ["Developer", "Student", "Innovator", "Problem Solver"];
+let roleIndex = 0;
+let letterIndex = roles[0].length;
+let deleting = true;
 
 function typeEffect() {
-  const currentWord = words[wordIndex];
+  if (!typedRole) return;
+
+  const current = roles[roleIndex];
 
   if (deleting) {
     letterIndex--;
+    typedRole.textContent = current.substring(0, letterIndex);
   } else {
     letterIndex++;
+    typedRole.textContent = current.substring(0, letterIndex);
   }
 
-  typedText.textContent = currentWord.substring(0, letterIndex);
+  let delay = deleting ? 55 : 100;
 
-  let speed = deleting ? 45 : 95;
-
-  if (!deleting && letterIndex === currentWord.length) {
+  if (!deleting && letterIndex === current.length) {
     deleting = true;
-    speed = 1700;
-  }
-
-  if (deleting && letterIndex === 0) {
+    delay = 1300;
+  } else if (deleting && letterIndex === 0) {
     deleting = false;
-    wordIndex = (wordIndex + 1) % words.length;
-    speed = 350;
+    roleIndex = (roleIndex + 1) % roles.length;
+    delay = 350;
   }
 
-  setTimeout(typeEffect, speed);
+  setTimeout(typeEffect, delay);
 }
 
-// Start typing after the opening animation
-setTimeout(typeEffect, 1500);
+if (typedRole) setTimeout(typeEffect, 1400);
 
+// Portrait fallback
+const profileImage = document.getElementById("profileImage");
+const portraitPlaceholder = document.getElementById("portraitPlaceholder");
 
-// ===================================
-// IMAGE FALLBACK
-// ===================================
+if (profileImage) {
+  profileImage.addEventListener("load", () => {
+    portraitPlaceholder.style.display = "none";
+  });
 
-const profileImage = document.querySelector(".photo-frame img");
-const photoPlaceholder = document.querySelector(".photo-placeholder");
-
-function showFallback() {
-  profileImage.style.display = "none";
-  photoPlaceholder.style.display = "block";
+  profileImage.addEventListener("error", () => {
+    profileImage.style.display = "none";
+    portraitPlaceholder.style.display = "flex";
+  });
 }
 
-profileImage.addEventListener("error", showFallback);
-
-if (profileImage.complete && profileImage.naturalWidth === 0) {
-  showFallback();
-}
-
-
-// ===================================
-// SCROLL REVEAL FOR FEATURE CARDS
-// ===================================
-
-const cards = document.querySelectorAll(".feature-card");
-
-const revealObserver = new IntersectionObserver(
-  (entries, observer) => {
-    entries.forEach((entry, index) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("card-visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  {
-    threshold: 0.15
-  }
-);
-
-cards.forEach(card => {
-  card.style.opacity = "0";
-  card.style.transform = "translateY(25px)";
-  card.style.transition = "opacity 0.7s ease, transform 0.7s ease";
-
-  revealObserver.observe(card);
-});
-
-
-// Add visible card styling
-const cardStyle = document.createElement("style");
-
-cardStyle.textContent = `
-  .feature-card.card-visible {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-  }
-`;
-
-document.head.appendChild(cardStyle);
-
-
-// ===================================
-// FOOTER YEAR
-// ===================================
-
-document.getElementById("year").textContent =
-  new Date().getFullYear();
-
-
-// ===================================
-// ACTIVE PAGE NAVIGATION
-// ===================================
-
-document.querySelectorAll(".nav-links a").forEach(link => {
-  const currentPage = window.location.pathname.split("/").pop();
-  const linkPage = link.getAttribute("href");
-
-  if (linkPage === currentPage ||
-      (currentPage === "" && linkPage === "index.html")) {
-    link.classList.add("active");
-  }
-});
+// Footer year
+const year = document.getElementById("year");
+if (year) year.textContent = new Date().getFullYear();
