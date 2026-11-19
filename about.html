@@ -2,225 +2,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#f7f7f2">
-    <title>About Me | Robert</title>
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="about.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f6f5f0">
+  <meta name="description" content="Learn more about Robert Sano, his interests, values and journey.">
+  <title>About — Robert Sano</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="about.css">
 </head>
-<body class="about-page">
+<body>
 
-    <div class="page-loader">
-        <div class="loader-mark">R.</div>
-    </div>
+  <header class="site-header">
+    <a class="logo" href="index.html">RS<span>.</span></a>
 
-    <header class="site-header">
-        <a href="index.html" class="brand">R<span>.</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span>
+    </button>
 
-        <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html" class="active">About</a>
-        </nav>
+    <nav class="navigation" id="navigation">
+      <a href="index.html">Home</a>
+      <a class="active" href="about.html">About</a>
+      <a href="journey.html">Journey</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <span class="header-index">GET TO KNOW ME / 02</span>
+  </header>
 
-        <a href="mailto:YOUR_EMAIL@example.com" class="nav-contact">
-            Let's connect <span>↗</span>
-        </a>
+  <main class="about-page">
 
-        <button class="menu-toggle" aria-label="Toggle navigation">
-            <span></span><span></span>
-        </button>
-    </header>
+    <section class="about-opening">
+      <div class="about-opening-top">
+        <span class="eyebrow">A LITTLE CONTEXT / 001</span>
+        <span class="about-date">RWANDA · 2026</span>
+      </div>
 
-    <main>
+      <div class="about-opening-content">
+        <div class="about-heading">
+          <p class="about-kicker">BEHIND THE INITIALS</p>
+          <h1>Not just what<br>I do<span class="blue-dot">.</span><br><em>But why I do it.</em></h1>
+        </div>
 
-        <!-- INTRO -->
-        <section class="about-intro">
-            <div class="about-intro-content">
-                <span class="eyebrow" data-reveal>THE PERSON BEHIND THE CODE</span>
+        <div class="about-side-note">
+          <span class="side-note-mark">“</span>
+          <p>I'm interested in the space where curiosity meets creativity, and ideas become something real.</p>
+          <span class="side-note-line"></span>
+          <small>AN INTRODUCTION</small>
+        </div>
+      </div>
 
-                <h1 data-reveal>
-                    More than<br>
-                    <span>just a developer.</span>
-                </h1>
+      <div class="about-bottom-label">
+        <span>SCROLL TO KNOW ME</span>
+        <span>↓</span>
+      </div>
+    </section>
 
-                <p class="intro-description" data-reveal>
-                    I'm a student, a creator, and a curious mind
-                    exploring how technology can make a difference.
-                    I believe every great idea begins with a question.
-                </p>
+    <section class="about-story">
+      <div class="story-label">
+        <span class="eyebrow">01 / MY STORY</span>
+        <span class="story-vertical">THE PERSON BEHIND THE WORK</span>
+      </div>
 
-                <div class="intro-meta" data-reveal>
-                    <span><i></i> Based in Rwanda</span>
-                    <span>Student · Developer · Creator</span>
-                </div>
-            </div>
+      <div class="story-content">
+        <h2>I'm a student, a creator, and a lifelong learner.</h2>
 
-            <div class="intro-art" data-reveal>
-                <div class="art-orbit orbit-one"></div>
-                <div class="art-orbit orbit-two"></div>
-                <div class="art-center">
-                    <span>R.</span>
-                </div>
-                <div class="art-label label-top">CURIOSITY</div>
-                <div class="art-label label-bottom">CREATIVITY</div>
-                <div class="art-dot dot-one"></div>
-                <div class="art-dot dot-two"></div>
-            </div>
+        <p class="story-lead">
+          My journey is shaped by questions, experiments, challenges,
+          and the excitement of discovering something new.
+        </p>
 
-            <div class="intro-index">01 / INTRODUCTION</div>
-        </section>
+        <p>
+          I'm currently a student in Rwanda with a strong interest in
+          mathematics, physics, chemistry, and technology. I enjoy
+          understanding how things work, exploring new ideas, and
+          finding ways to apply what I learn.
+        </p>
 
-        <!-- STORY -->
-        <section class="story-section">
-            <div class="section-heading" data-reveal>
-                <span class="eyebrow">A LITTLE ABOUT ME</span>
-                <h2>My story<span>.</span></h2>
-            </div>
+        <p>
+          Technology has become one of the ways I express that curiosity.
+          Through coding and digital projects, I get to experiment,
+          solve problems, and turn concepts into practical experiences.
+        </p>
 
-            <div class="story-grid">
-                <div class="story-side" data-reveal>
-                    <span class="story-number">01</span>
-                    <p>THE BEGINNING</p>
-                </div>
+        <p>
+          I also believe learning should reach beyond the classroom.
+          Sharing knowledge, collaborating with others, and contributing
+          to my community are important parts of the person I want to become.
+        </p>
 
-                <div class="story-content" data-reveal>
-                    <h3>Always learning.<br>Always exploring.</h3>
-                    <p>
-                        My journey is shaped by curiosity and the desire
-                        to understand how things work. From mathematics
-                        and science to technology and design, I enjoy
-                        discovering connections between ideas.
-                    </p>
-                    <p>
-                        I don't just want to learn how technology works.
-                        I want to use what I learn to create useful things
-                        and solve meaningful problems.
-                    </p>
-                </div>
-            </div>
+        <div class="story-signature">
+          <span class="signature-line"></span>
+          <span>Curious by nature. Growing by choice.</span>
+        </div>
+      </div>
+    </section>
 
-            <div class="story-divider"></div>
+    <section class="about-interests">
+      <div class="interests-heading">
+        <span class="eyebrow">02 / WHAT I EXPLORE</span>
+        <h2>Things that<br>keep me curious<span class="blue-dot">.</span></h2>
+      </div>
 
-            <div class="story-grid second-story">
-                <div class="story-side" data-reveal>
-                    <span class="story-number">02</span>
-                    <p>THE PRESENT</p>
-                </div>
+      <div class="interest-list">
+        <article class="interest-row">
+          <span class="interest-number">01</span>
+          <div>
+            <h3>Technology & Development</h3>
+            <p>Building websites, exploring software, and learning how digital systems work.</p>
+          </div>
+          <span class="interest-symbol">⌘</span>
+        </article>
 
-                <div class="story-content" data-reveal>
-                    <h3>Turning ideas<br>into reality.</h3>
-                    <p>
-                        Today, I explore web development, digital
-                        creativity, science, and leadership. Building
-                        projects gives me a chance to turn what I learn
-                        into something people can actually use.
-                    </p>
-                    <p>
-                        Every project teaches me something new.
-                        Every challenge is an opportunity to improve.
-                    </p>
-                </div>
-            </div>
-        </section>
+        <article class="interest-row">
+          <span class="interest-number">02</span>
+          <div>
+            <h3>Science & Mathematics</h3>
+            <p>Exploring the principles, patterns, and ideas that explain our world.</p>
+          </div>
+          <span class="interest-symbol">∑</span>
+        </article>
 
-        <!-- PRINCIPLES -->
-        <section class="principles-section">
-            <div class="principles-heading" data-reveal>
-                <span class="eyebrow">WHAT DRIVES ME</span>
-                <h2>Things I believe in<span>.</span></h2>
-            </div>
+        <article class="interest-row">
+          <span class="interest-number">03</span>
+          <div>
+            <h3>Leadership & Collaboration</h3>
+            <p>Working with people, sharing ideas, and learning through teamwork.</p>
+          </div>
+          <span class="interest-symbol">↗</span>
+        </article>
 
-            <div class="principles-grid">
-                <article class="principle-card" data-reveal>
-                    <span class="principle-index">01</span>
-                    <div class="principle-symbol">✳</div>
-                    <h3>Curiosity</h3>
-                    <p>
-                        Asking questions, exploring possibilities,
-                        and never being afraid to learn something new.
-                    </p>
-                </article>
+        <article class="interest-row">
+          <span class="interest-number">04</span>
+          <div>
+            <h3>Innovation & Problem Solving</h3>
+            <p>Looking at challenges as opportunities to think differently and create.</p>
+          </div>
+          <span class="interest-symbol">✳</span>
+        </article>
+      </div>
+    </section>
 
-                <article class="principle-card" data-reveal>
-                    <span class="principle-index">02</span>
-                    <div class="principle-symbol">⌘</div>
-                    <h3>Innovation</h3>
-                    <p>
-                        Looking beyond the obvious and finding creative
-                        ways to approach everyday challenges.
-                    </p>
-                </article>
+    <section class="principles-section">
+      <div class="principles-intro">
+        <span class="eyebrow">03 / WHAT I BELIEVE</span>
+        <h2>My principles<span class="blue-dot">.</span></h2>
+        <p>Some ideas I try to carry into everything I learn and create.</p>
+      </div>
 
-                <article class="principle-card" data-reveal>
-                    <span class="principle-index">03</span>
-                    <div class="principle-symbol">↗</div>
-                    <h3>Impact</h3>
-                    <p>
-                        Creating with purpose and using knowledge
-                        to contribute positively to my community.
-                    </p>
-                </article>
-            </div>
-        </section>
+      <div class="principles-grid">
+        <article class="principle">
+          <span>01 — CURIOSITY</span>
+          <h3>Keep asking.</h3>
+          <p>Good questions open doors to better understanding.</p>
+        </article>
 
-        <!-- INTERESTS -->
-        <section class="interests-section">
-            <div class="interests-heading" data-reveal>
-                <span class="eyebrow">MY WORLD OF INTERESTS</span>
-                <h2>What keeps me<br>inspired<span>.</span></h2>
-            </div>
+        <article class="principle">
+          <span>02 — CONSISTENCY</span>
+          <h3>Keep improving.</h3>
+          <p>Progress comes from showing up, practising, and learning.</p>
+        </article>
 
-            <div class="interest-list">
-                <div class="interest-item" data-reveal>
-                    <span>01</span>
-                    <h3>Technology & Development</h3>
-                    <span class="interest-arrow">↗</span>
-                </div>
+        <article class="principle">
+          <span>03 — PURPOSE</span>
+          <h3>Build with meaning.</h3>
+          <p>Knowledge becomes more valuable when it helps someone.</p>
+        </article>
+      </div>
+    </section>
 
-                <div class="interest-item" data-reveal>
-                    <span>02</span>
-                    <h3>Mathematics & Science</h3>
-                    <span class="interest-arrow">↗</span>
-                </div>
+    <section class="about-next">
+      <div>
+        <span class="eyebrow">THERE'S MORE TO THE STORY</span>
+        <h2>Let's explore<br>what comes next<span class="blue-dot">.</span></h2>
+      </div>
+      <a class="button button-primary" href="journey.html">Explore my journey <span>↗</span></a>
+      <span class="next-decoration">02</span>
+    </section>
 
-                <div class="interest-item" data-reveal>
-                    <span>03</span>
-                    <h3>Creative Problem Solving</h3>
-                    <span class="interest-arrow">↗</span>
-                </div>
+  </main>
 
-                <div class="interest-item" data-reveal>
-                    <span>04</span>
-                    <h3>Leadership & Collaboration</h3>
-                    <span class="interest-arrow">↗</span>
-                </div>
-            </div>
-        </section>
+  <footer class="site-footer">
+    <a class="logo" href="index.html">RS<span>.</span></a>
+    <p>Designed with curiosity. © <span id="year"></span> Robert Sano.</p>
+    <a href="index.html" class="back-top">BACK HOME ↑</a>
+  </footer>
 
-        <!-- CLOSING -->
-        <section class="about-closing" data-reveal>
-            <div class="closing-decoration">R.</div>
-            <span class="eyebrow">THE JOURNEY CONTINUES</span>
-            <h2>Still learning.<br><span>Still building.</span></h2>
-            <p>
-                This is only the beginning. There's more to discover,
-                more to create, and more ways to make an impact.
-            </p>
-            <a href="index.html" class="back-home">
-                Back to home <span>↗</span>
-            </a>
-        </section>
-
-    </main>
-
-    <footer class="site-footer">
-        <span>© <span id="year"></span> Robert Sano</span>
-        <span>Made with curiosity <span class="footer-heart">✳</span></span>
-    </footer>
-
-    <script src="script.js"></script>
-    <script src="about.js"></script>
+  <script src="script.js"></script>
+  <script src="about.js"></script>
 </body>
 </html>
