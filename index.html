@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#f8f5ed">
-  <meta name="description" content="Robert's personal portfolio — student, developer and innovator from Rwanda.">
-  <title>Robert | Student, Developer & Innovator</title>
+  <meta name="theme-color" content="#f8f6ef">
+  <meta name="description" content="Robert — Student, Developer and Innovator from Rwanda.">
+  <title>Robert | Personal Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,238 +14,162 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="navbar">
-    <a class="logo" href="#home">ROBERT<span>.</span></a>
 
-    <button class="menu-toggle" id="menuToggle"
-      aria-label="Toggle navigation" aria-expanded="false">
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-logo">ROBERT<span>.</span></div>
+    <div class="loader-line"><span></span></div>
+    <p>Preparing my creative space...</p>
+  </div>
+
+  <header class="navbar">
+    <a href="index.html" class="logo">ROBERT<span>.</span></a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
 
     <nav class="nav-links" id="navLinks">
-      <a class="active" href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#certificates">Certificates</a>
-      <a href="#contact">Contact</a>
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
     </nav>
 
-    <button class="theme-toggle" id="themeToggle"
-      aria-label="Switch color theme">☼</button>
+    <a class="nav-contact" href="mailto:YOUR_EMAIL@example.com">Let's talk <span>↗</span></a>
   </header>
 
   <main>
-    <section class="hero section-wrap" id="home">
+    <section class="hero">
       <div class="hero-copy">
-        <span class="eyebrow"><span class="status-dot"></span> Hello, world.</span>
-
-        <h1>I'm <span>Robert.</span></h1>
-
-        <div class="roles" aria-label="Student, Full Stack Developer, Innovator">
-          <span>Student</span>
-          <i></i>
-          <span id="typedRole">Full Stack Developer</span>
-          <i></i>
-          <span>Innovator</span>
+        <div class="availability reveal">
+          <span class="availability-dot"></span>
+          Curious mind. Always learning.
         </div>
 
-        <p class="hero-description">
-          I'm a Rwandan student passionate about technology, problem-solving
-          and building solutions that make a real impact. I turn ideas into
-          projects and constantly strive to learn, grow and create a better future.
+        <p class="hello reveal">HELLO, WORLD <span>✳</span></p>
+
+        <h1 class="main-heading reveal">
+          I'm <span class="name-gradient">Robert.</span>
+        </h1>
+
+        <div class="typing-line reveal">
+          <span class="typing-prefix">I'm a </span>
+          <span id="typedText"></span><span class="cursor">|</span>
+        </div>
+
+        <p class="hero-description reveal">
+          I explore technology, turn ideas into projects and build solutions
+          that can make a difference. I'm a student from Rwanda with a
+          passion for learning, creating and discovering what's possible.
         </p>
 
-        <div class="hero-actions">
-          <a class="button button-primary" href="#projects">
-            View My Projects <span aria-hidden="true">→</span>
+        <div class="hero-buttons reveal">
+          <a href="about.html" class="button button-primary">
+            Discover My Story <span>↗</span>
           </a>
-          <a class="button button-outline" href="#contact">
-            <span aria-hidden="true">✉</span> Contact Me
+          <a href="#explore" class="button button-secondary">
+            Explore <span>↓</span>
           </a>
         </div>
 
-        <div class="location-note">
-          <span>⌖</span> Rwanda <span class="note-divider">/</span>
-          <span>⌑</span> Grade 10 → 11
+        <div class="hero-location reveal">
+          <span>⌖</span> Rwanda
+          <span class="location-divider">/</span>
+          <span>✳</span> Building my future
         </div>
       </div>
 
-      <div class="portrait-area">
-        <div class="portrait-backdrop"></div>
-        <svg class="portrait-lines" viewBox="0 0 600 500" fill="none"
-          aria-hidden="true">
-          <path d="M20 370 C80 350 85 290 150 300 S240 400 350 340 S430 180 500 210 S555 245 600 170"/>
-          <path d="M0 395 C70 375 100 315 155 325 S250 425 365 360 S445 205 505 230 S560 265 600 195"/>
-          <path d="M90 65 H160 L185 90 V120 L215 150"/>
-          <path d="M5 260 H65 L95 230 H145"/>
-          <path d="M220 20 C360 0 370 100 460 115 S550 80 600 40"/>
-          <path d="M225 32 C355 12 380 115 460 130 S555 95 600 55"/>
-          <circle cx="90" cy="65" r="3"/>
-          <circle cx="5" cy="260" r="3"/>
-          <circle cx="145" cy="230" r="3"/>
+      <div class="hero-visual">
+        <svg class="circuit-lines" viewBox="0 0 700 560" fill="none" aria-hidden="true">
+          <path class="snake snake-one" d="M0 420 C100 420 90 300 190 310 S300 440 400 340 S510 180 590 220 S650 240 700 150"/>
+          <path class="snake snake-two" d="M0 445 C110 445 110 325 200 335 S315 465 415 365 S525 205 605 245 S665 265 700 175"/>
+          <path class="snake snake-three" d="M70 30 H190 L230 70 V125 H290"/>
+          <path class="snake snake-four" d="M450 0 C450 90 550 80 570 140 S640 170 700 100"/>
+          <path class="snake snake-five" d="M0 190 H90 L130 150 H205"/>
+          <circle cx="70" cy="30" r="4"/>
+          <circle cx="290" cy="125" r="4"/>
+          <circle cx="205" cy="150" r="4"/>
+          <circle cx="700" cy="150" r="4"/>
         </svg>
 
-        <div class="portrait-frame">
-          <img src="profile.png" alt="Portrait of Robert"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
-          <div class="photo-fallback">R<span>.</span></div>
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+
+        <div class="photo-frame">
+          <img src="profile.png" alt="Robert's profile portrait">
+          <div class="photo-placeholder">R<span>.</span></div>
         </div>
 
-        <div class="handwritten">Build<br>Learn<br>Innovate <span>↙</span></div>
-        <div class="code-symbol" aria-hidden="true">&lt;/&gt;</div>
+        <div class="visual-tag tag-top">
+          <span class="tag-dot"></span>
+          Creative mind
+        </div>
+
+        <div class="visual-tag tag-bottom">
+          <span> &lt;/&gt; </span> Developer
+        </div>
+
+        <div class="visual-handwriting">
+          Build.<br>Learn.<br>Innovate.
+          <span>↙</span>
+        </div>
       </div>
 
-      <div class="scroll-hint"><span>SCROLL</span><i></i></div>
-    </section>
-
-    <section class="pillars section-wrap" aria-label="My values">
-      <article class="pillar">
-        <div class="pillar-icon">&lt;/&gt;</div>
-        <div><h3>Build</h3><p>Turning ideas into<br>real projects.</p></div>
-      </article>
-      <article class="pillar">
-        <div class="pillar-icon">♧</div>
-        <div><h3>Learn</h3><p>Exploring new technologies<br>and improving every day.</p></div>
-      </article>
-      <article class="pillar">
-        <div class="pillar-icon">♧</div>
-        <div><h3>Innovate</h3><p>Creating solutions for<br>a better tomorrow.</p></div>
-      </article>
-    </section>
-
-    <section class="about section-wrap" id="about">
-      <div class="about-copy">
-        <span class="section-label">ABOUT ME</span>
-        <h2>More Than Just<br>a <span>Student</span></h2>
-        <p>
-          I'm Robert, a student from Rwanda with a passion for physics,
-          mathematics, chemistry and computer science. I'm focused on building
-          skills, creating meaningful projects and making a positive impact
-          in my community and beyond.
-        </p>
-        <div class="idea-note">Ideas <span>→</span> Code <span>→</span> Impact</div>
-      </div>
-
-      <div class="profile-facts">
-        <div class="fact"><span class="fact-icon">♙</span><div><small>Name</small><p>SANO UWITONZE Robert</p></div></div>
-        <div class="fact"><span class="fact-icon">⌖</span><div><small>Location</small><p>Rwanda</p></div></div>
-        <div class="fact"><span class="fact-icon">⌂</span><div><small>School</small><p>College Saint Andre</p></div></div>
-        <div class="fact"><span class="fact-icon">⌑</span><div><small>Current Grade</small><p>Grade 10 (S4)</p></div></div>
-        <div class="fact"><span class="fact-icon">♡</span><div><small>Interests</small><p>Physics, Math, Chemistry,<br>Biology, Computer Science, AI</p></div></div>
-      </div>
-
-      <blockquote class="quote-card">
-        <span class="quote-mark">“</span>
-        <p>Technology is not just about machines, it's about people, ideas and the future.</p>
-        <cite>— Robert</cite>
-      </blockquote>
-    </section>
-
-    <section class="journey-section" id="journey">
-      <div class="journey section-wrap">
-        <div class="journey-copy">
-          <span class="section-label">MY JOURNEY</span>
-          <h2>From Curiosity<br>to <span>Purpose</span></h2>
-          <p>
-            It all started with a simple curiosity — how things work.
-            That curiosity grew into a passion for technology, leading me
-            to explore coding, build projects and join opportunities that
-            help me grow. Every step teaches me something new and brings
-            me closer to my goals.
-          </p>
-          <a class="button button-primary" href="#about">Learn More About Me <span>→</span></a>
-        </div>
-
-        <div class="timeline">
-          <article class="timeline-item">
-            <span class="timeline-icon">▣</span>
-            <div><small>2023</small><p>Started exploring computers and programming.</p></div>
-          </article>
-          <article class="timeline-item">
-            <span class="timeline-icon">⌘</span>
-            <div><small>2024</small><p>Built my first real project, Electro-Lass.</p></div>
-          </article>
-          <article class="timeline-item">
-            <span class="timeline-icon">♧</span>
-            <div><small>2025</small><p>Became an ICSC Ambassador and joined global opportunities.</p></div>
-          </article>
-          <article class="timeline-item">
-            <span class="timeline-icon">⌑</span>
-            <div><small>2026+</small><p>Preparing for Grade 11 and aiming for fully funded study abroad.</p></div>
-          </article>
-        </div>
-
-        <div class="skills-card">
-          <span class="section-label">SKILLS &amp; TOOLS</span>
-          <div class="skills-grid">
-            <div class="skill"><div><span>Python</span></div><i><b style="--level:78%"></b></i></div>
-            <div class="skill"><div><span>Firebase</span></div><i><b style="--level:85%"></b></i></div>
-            <div class="skill"><div><span>HTML &amp; CSS</span></div><i><b style="--level:90%"></b></i></div>
-            <div class="skill"><div><span>Supabase</span></div><i><b style="--level:70%"></b></i></div>
-            <div class="skill"><div><span>JavaScript</span></div><i><b style="--level:65%"></b></i></div>
-            <div class="skill"><div><span>Git &amp; GitHub</span></div><i><b style="--level:72%"></b></i></div>
-            <div class="skill"><div><span>C++</span></div><i><b style="--level:50%"></b></i></div>
-            <div class="skill"><div><span>Linux</span></div><i><b style="--level:55%"></b></i></div>
-            <div class="skill"><div><span>SQL</span></div><i><b style="--level:52%"></b></i></div>
-            <div class="skill"><div><span>AI &amp; Machine Learning</span></div><i><b style="--level:45%"></b></i></div>
-          </div>
-          <p class="always-learning">∞ &nbsp; Always learning...</p>
-        </div>
+      <div class="hero-bottom">
+        <span>SCROLL TO EXPLORE</span>
+        <div class="scroll-line"></div>
+        <span>01 / 02</span>
       </div>
     </section>
 
-    <section class="simple-section section-wrap" id="projects">
-      <span class="section-label">SELECTED WORK</span>
-      <h2>Ideas made <span>real.</span></h2>
-      <p class="section-intro">A few projects I'm building, improving and learning from.</p>
-      <div class="project-grid">
-        <article class="project-card">
-          <span class="project-number">01 / EDUCATION</span>
-          <h3>Electro-Lass</h3>
-          <p>A learning platform concept designed to make educational resources more accessible.</p>
-          <a href="https://electro-lass.vercel.app/" target="_blank" rel="noopener noreferrer">Explore project ↗</a>
+    <section class="explore-section" id="explore">
+      <div class="section-heading">
+        <span class="section-label">WHAT DRIVES ME</span>
+        <h2>Three ideas. <span>One journey.</span></h2>
+        <p>My approach to learning, creating and making an impact.</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <span class="feature-number">01</span>
+          <div class="feature-icon">&lt;/&gt;</div>
+          <h3>Build</h3>
+          <p>Transforming ideas into websites, applications and useful digital experiences.</p>
+          <span class="feature-arrow">↗</span>
         </article>
-        <article class="project-card">
-          <span class="project-number">02 / PORTFOLIO</span>
-          <h3>My Digital Space</h3>
-          <p>A personal space to share my projects, learning journey and ideas.</p>
-          <a href="#home">Back to top ↑</a>
+
+        <article class="feature-card">
+          <span class="feature-number">02</span>
+          <div class="feature-icon">⌘</div>
+          <h3>Learn</h3>
+          <p>Exploring science, technology and new skills with curiosity and determination.</p>
+          <span class="feature-arrow">↗</span>
         </article>
-        <article class="project-card">
-          <span class="project-number">03 / IN PROGRESS</span>
-          <h3>More to come</h3>
-          <p>I'm continuing to experiment, create and turn new ideas into useful tools.</p>
-          <a href="#contact">Let's connect ↗</a>
+
+        <article class="feature-card">
+          <span class="feature-number">03</span>
+          <div class="feature-icon">✳</div>
+          <h3>Innovate</h3>
+          <p>Finding creative ways to solve problems and contribute to a better future.</p>
+          <span class="feature-arrow">↗</span>
         </article>
       </div>
     </section>
 
-    <section class="certificates section-wrap" id="certificates">
-      <span class="section-label">GROWTH &amp; RECOGNITION</span>
-      <h2>Learning beyond <span>the classroom.</span></h2>
-      <p>I'm building my experience through learning, leadership and technology opportunities.</p>
-      <div class="certificate-note">
-        <span class="certificate-icon">✳</span>
-        <div><h3>More achievements coming soon</h3><p>This section will showcase my verified certificates, awards and ambassador experiences.</p></div>
+    <section class="home-note">
+      <div class="note-inner">
+        <span class="section-label">A LITTLE ABOUT MY MINDSET</span>
+        <h2>Curiosity starts the journey.<br><span>Consistency builds the future.</span></h2>
+        <a href="about.html" class="text-link">Get to know me <span>→</span></a>
       </div>
-    </section>
-
-    <section class="contact section-wrap" id="contact">
-      <span class="section-label">LET'S CONNECT</span>
-      <h2>Have an idea? <span>Let's talk.</span></h2>
-      <p>Interested in technology, collaboration or learning together? Reach out.</p>
-      <a class="button button-primary" href="mailto:robertsanouwitonze@gmail.com">Email Me <span>↗</span></a>
+      <div class="note-decoration">R<span>.</span></div>
     </section>
   </main>
 
   <footer class="footer">
-    <a class="logo" href="#home">ROBERT<span>.</span></a>
-    <p>Curious mind. Builder's spirit. Always learning.</p>
-    <a class="github-link" href="https://github.com/robertsanouwitonze-hub"
-      target="_blank" rel="noopener noreferrer" aria-label="Visit my GitHub">
-      GitHub ↗
-    </a>
-    <small>© <span id="year"></span> Robert. Made with curiosity in Rwanda.</small>
+    <a href="index.html" class="logo">ROBERT<span>.</span></a>
+    <p>Designed with curiosity in Rwanda.</p>
+    <a href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+    <small>© <span id="year"></span> Robert. All rights reserved.</small>
   </footer>
+
 </body>
 </html>
